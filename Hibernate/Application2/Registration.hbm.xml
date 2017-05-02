@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name = "com.hibernate.app2.domain.Registration" table = "REGISTRATION" >
+		
+		<!-- lets the application assign an identifier -->
+		<id name="regid" column="REG_ID" type="integer">
+			<!-- primary key class generator -->
+			<generator class="assigned"></generator>
+		</id>
+		
+		<!-- common properties -->
+		<property name="name" column="NAME" type="string" length="100" ></property>
+		<property name="email" column="EMAIL" type="string" length="50" ></property>
+		<property name="mobile" column="MOBILE" type="string" length="10" ></property>
+		<property name="address" column="ADDRESS" type="string" length="100" ></property>
+		
+	</class>
+</hibernate-mapping>
